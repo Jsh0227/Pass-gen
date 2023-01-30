@@ -10,6 +10,7 @@ const specialChars=['"','!','@','$','%','^','&','*','#','"']
 
 let passwordGenerated = ""
 function generatePassword(){
+  //stores all the characters and symbols
   let bowl =[]
   let passwordLength = prompt("How many characters do you want your password to have?")
   console.log(passwordLength)
@@ -21,23 +22,30 @@ function generatePassword(){
   let confirmUpperCase = confirm("Would you like an uppercase letter in your password?")
   console.log(confirmUpperCase)
   if(confirmUpperCase === true){
+    //Saves the uppercase letter into the bowl.
     bowl = bowl.concat(upperCase)
     console.log(bowl)
   }
     
    let confirmLowerCase = confirm("Would you like a lowercase letter in your password?")
    if (confirmLowerCase === true){
+
+    //Saves a lowercase letter into the bowl.
     bowl = bowl.concat(lowerCase)
     console.log(bowl)
    }
   let confirmNumber = confirm("Would you like a number in your password?")
   if (confirmNumber === true){
+
+    //Saves a number into the bowl.
     bowl = bowl.concat(number)
     console.log(bowl)
   }
 
   let confirmSpecialChars = confirm("Would you like a number in your password?")
   if (confirmSpecialChars === true){
+
+    //Saves a special character in the bowl.
     bowl = bowl.concat(specialChars)
     console.log(bowl)
   }
